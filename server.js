@@ -33,21 +33,10 @@ var sessionMiddleWare = session({
 app.use(bodyParser.json())
 app.use(sessionMiddleWare)
 // use the library express-passport-ldap-mongoose
-LdapAuth.init(CONFIG.ldap.dn, CONFIG.ldap.url, app, (id, done) => {
-  User.findOne({ uid: id }).exec()
-    .then(user => {
-      if (!user) {
-        done(new Error(`Deserialize user failed. ${id} is deleted from local DB`))
-      } else {
-        done(null, user)
-      }
-    })
-}, (user, res) => {
-  User.findOneAndUpdate({ uid: user.uid }, user, { upsert: true, new: true }).exec()
-    .then(user => {
-      return res.json({ success: true, message: 'authentication succeeded', user: user.toObject() })
-    })
-})
+LdapAuth.init(CONFIG.ldap.dn, CONFIG.ldap.url, app, 
+  (id) => User.findOne({ uid: id }).exec(), 
+  (user) => User.findOneAndUpdate({ uid: user.uid }, user, { upsert: true, new: true }).exec()
+)
 
 // serve static pages
 app.use(express.static('public'))
