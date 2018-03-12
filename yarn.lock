@@ -503,9 +503,9 @@ etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
 
-"express-passport-ldap-mongoose@git+https://github.com/shaozi/express-passport-ldap-mongoose.git":
-  version "1.0.0"
-  resolved "git+https://github.com/shaozi/express-passport-ldap-mongoose.git#2a100697172e39abb64717298ef7fe4a5027e088"
+express-passport-ldap-mongoose@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/express-passport-ldap-mongoose/-/express-passport-ldap-mongoose-2.0.1.tgz#46ba884035fbb004259cfceaf796912bec7afb3c"
   dependencies:
     passport "^0.4.0"
     passport-ldapauth "^2.0.0"
