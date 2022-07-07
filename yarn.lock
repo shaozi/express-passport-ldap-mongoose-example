@@ -902,8 +902,8 @@ mkdirp@^0.5.1, mkdirp@~0.5.1:
     minimist "0.0.8"
 
 moment@^2.10.6:
-  version "2.22.0"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.0.tgz#7921ade01017dd45186e7fee5f424f0b8663a730"
+  version "2.29.4"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
 
 mongodb-core@2.1.19:
   version "2.1.19"
